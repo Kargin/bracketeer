@@ -1,0 +1,11 @@
+{
+  "name": "kargin/bracketeer",
+  "description": "returns true if input string with \"(\", \"\\r\", \"\\t\", \"\\n\", \" \", \")\", contains equal number of \"(\" and \")\" symbols",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kargin Anton",
+      "email": "rmbd91@mail.ru"
+    }
+  ]
+}
