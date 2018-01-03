@@ -1,5 +1,6 @@
 {
   "name": "kargin/bracketeer",
+  "type": "library",
   "description": "returns true if input string with \"(\", \"\\r\", \"\\t\", \"\\n\", \" \", \")\", contains equal number of \"(\" and \")\" symbols",
   "license": "MIT",
   "authors": [
@@ -7,5 +8,10 @@
       "name": "Kargin Anton",
       "email": "rmbd91@mail.ru"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kargin\\": "src"
+    }
+  }
 }

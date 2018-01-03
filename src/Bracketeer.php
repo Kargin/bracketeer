@@ -6,6 +6,8 @@
  * Date: 01.01.18
  * Time: 20:48
  */
+namespace Kargin;
+
 class Bracketeer
 {
     public function isBalanced($s) {
