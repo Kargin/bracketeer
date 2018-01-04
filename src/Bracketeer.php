@@ -28,7 +28,7 @@ class Bracketeer
                 }
                 if ($bal < 0) return false;
             } else {
-                throw new InvalidArgumentException('Input string contains forbidden symbol "' . $ch . '". Allowed chars are: "(", ")", " ", \n", "\t", "\r"');
+                throw new \InvalidArgumentException('Input string contains forbidden symbol "' . $ch . '". Allowed chars are: "(", ")", " ", \n", "\t", "\r"');
             }
         }
         return ($bal == 0);
