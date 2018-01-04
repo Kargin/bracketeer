@@ -4,20 +4,21 @@ Returns true if symbols "(" and ")" are balanced and false otherwise.
 Throws InvalidArgumentException if given string contains any other symbol than said in first sentence.
 
 # Install
-'''
+Change directory to root of your project and execute command:
+```
 composer require kargin/bracketeer:dev-master
-'''
+```
 # Use
 In your project add following lines:
-'''
+```
 <?php
 require_once 'vendor/autoload.php';
 use Kargin\Bracketeer;
 
 $bracketeer = new Bracketeer();
-'''
+```
 To use library method "isBalanced":
-'''
+```
 $bracketeer->isBalanced($s);
-'''
+```
 
