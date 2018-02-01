@@ -1,36 +1,50 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: zeolite
- * Date: 01.01.18
- * Time: 20:48
- */
 namespace Kargin;
 
 class Bracketeer
 {
+    /**
+     * Checks if given string with brackets is balanced
+     * @param $s
+     * @return bool
+     */
     public function isBalanced($s) {
-        $bal = 0;
-        $allowed_chars = array("(", ")", " ", "\n", "\r", "\t");
-        for ($i=0; $i < strlen($s); $i++) {
+        $balance = 0;
+        $allowedChars = [
+            "(",
+            ")",
+            " ",
+            "\n",
+            "\r",
+            "\t",
+        ];
+        $length = strlen($s);
+
+        for ($i=0;  $i < $length; $i++) {
             $ch = substr($s, $i, 1);
-            if (in_array($ch, $allowed_chars)) {
-                switch ($ch) {
-                    case '(':
-                        $bal++;
-                        break;
-                    case ')':
-                        $bal--;
-                        break;
-                    default:
-                        continue;
-                }
-                if ($bal < 0) return false;
-            } else {
-                throw new \InvalidArgumentException('Input string contains forbidden symbol "' . $ch . '". Allowed chars are: "(", ")", " ", \n", "\t", "\r"');
+
+            if (!in_array($ch, $allowedChars)) {
+                throw new \InvalidArgumentException(sprintf('Input string contains forbidden symbol %s.
+                Allowed chars are: "(", ")", " ", "\n", "\t", "\r\".', $ch));
+            }
+
+            switch ($ch) {
+                case '(':
+                    $balance++;
+                    break;
+                case ')':
+                    $balance--;
+                    break;
+                default:
+                    continue;
+            }
+
+            if ($balance < 0) {
+                return false;
             }
         }
-        return ($bal == 0);
+
+        return ($balance == 0);
     }
 }
