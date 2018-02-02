@@ -25,8 +25,7 @@ class Bracketeer
             $ch = substr($s, $i, 1);
 
             if (!in_array($ch, $allowedChars)) {
-                throw new \InvalidArgumentException(sprintf('Input string contains forbidden symbol %s.
-                Allowed chars are: "(", ")", " ", "\n", "\t", "\r\".', $ch));
+                throw new \InvalidArgumentException(sprintf('Input string contains forbidden symbol %s. Allowed chars are: "(", ")", " ", "\n", "\t", "\r\".', $ch));
             }
 
             switch ($ch) {
