@@ -6,6 +6,7 @@ class Bracketeer
 {
     /**
      * Checks if given string with brackets is balanced
+     * 
      * @param $s
      * @return bool
      */
